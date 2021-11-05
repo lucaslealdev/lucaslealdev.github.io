@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Balões de Order</title>
+	<link rel="stylesheet" href="estilo.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<p class="mouse">Clicando com o botão esquerdo do mouse em um balão você aumenta seu order, e clicando com o botão direito você diminui
+		seu order.</p>
+		<p class="touch">Tocando em um balão você aumenta seu order, e com um toque longo você diminui seu order.</p>
+		<br><br>
+		<div id="atmosfera">
+			<div class="balao b1">0</div>
+			<div class="balao b2">0</div>
+			<div class="balao b3">0</div>
+			<div class="balao b4">0</div>
+		</div>
+	</div>
+	<script>
+		let baloes = document.querySelectorAll('.balao');
+
+		baloes.forEach(item => {
+			item.addEventListener('click', event => {
+				let order = event.target.style.order || 0;
+				order++;
+				event.target.style.order = order;
+				event.target.innerHTML = order;
+			});
+		});
+		baloes.forEach(item => {
+			item.addEventListener('contextmenu', event => {
+				event.preventDefault();
+				let order = event.target.style.order || 0;
+				order--;
+				event.target.style.order = order;
+				event.target.innerHTML = order;
+			});
+		});
+	</script>
+</body>
+</html>

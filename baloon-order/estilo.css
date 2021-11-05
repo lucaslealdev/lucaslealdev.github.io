@@ -1,0 +1,80 @@
+*{
+    margin:0px;
+    border:0px;
+    padding:0px;
+}
+p{text-align: center;}
+body{
+    background: rgb(34,164,195);
+    background: linear-gradient(0deg, rgba(34,164,195,1) 0%, rgba(13,140,255,1) 100%);
+    background-size: cover;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow:hidden;
+}
+
+div.container{
+    max-width: 900px;
+    display:flex;
+    margin: 0 auto;
+    height: calc(100vh - 30px);
+    flex-direction: column;
+    padding-top:20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#atmosfera{
+  display: flex;
+  flex-direction:column;
+  height:calc(100% - 130px);
+  width:100%;
+  margin:0 auto;
+  justify-content: space-between;
+}
+
+@keyframes flutuar{
+    0% {top:-10px}
+    50% {top:+10px}
+    100% {top:-10px}
+}
+
+.balao{
+  cursor:pointer;
+  user-select:none;
+  width:70px;
+  height:70px;
+  line-height: 70px;
+  border-radius: 800px;
+  position:relative;
+  color:white;
+  font-size:50px;
+  text-align:center;
+  box-shadow: inset -5px 3px 14px #00000038;
+  animation-name: flutuar;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.balao::before{
+  font-size:20px;
+  color:black;
+  line-height: 28px;
+  position:absolute;
+  content:"⎠";
+  bottom:-53px;
+  left:25px;
+}
+
+.balao.b1{background:red;align-self:start;animation-delay: 300ms;}
+.balao.b2{background:green;align-self:end;}
+.balao.b3{background:#c70ae0;align-self:center;animation-delay: 700ms;}
+.balao.b4{background:rgb(37, 189, 216);align-self:start;animation-delay: 100ms;}
+
+.mouse{display: none;}
+.touch{display: block;}
+@media (any-hover: hover) {
+    .mouse{display: block;}
+    .touch{display: none;}
+}
