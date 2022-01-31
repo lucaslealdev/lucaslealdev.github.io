@@ -144,4 +144,13 @@ body {
 .timebar:last-child {
   margin-right: 0px;
 }
+
+.timebar#minute1:before, .timebar#second1:before {
+  content: "0\A 1\A 2\A 3\A 4\A 5\A";
+}
+
+.timebar#minute1, .timebar#second1 {
+  height: 314px;
+  margin-top: 299px;
+}
 /*# sourceMappingURL=style.css.map */
