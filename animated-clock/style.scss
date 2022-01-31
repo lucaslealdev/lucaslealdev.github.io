@@ -89,8 +89,22 @@ body{
         &:before{
             content: "0\A 1\A 2";
         }
-        &.n1{top:calc(-52px * 1);}
-        &.n2{top:calc(-52px * 2);}
+    }
+
+    &#minute1{
+        height: 313px;
+        margin-top: 295px;
+        &:before {
+            content: '0\A 1\A 2\A 3\A 4\A 5\A';
+        }
+    }
+
+    &#second1{
+        height: 313px;
+        margin-top: 295px;
+        &:before {
+            content: '0\A 1\A 2\A 3\A 4\A 5\A';
+        }
     }
     &:last-child{
         margin-right: 0px;
