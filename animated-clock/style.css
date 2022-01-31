@@ -1,0 +1,146 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: cyan;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.clock {
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+  opacity: 1;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  position: relative;
+  color: #006666;
+}
+
+.clock:before {
+  position: absolute;
+  content: ":";
+  left: 70px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.clock:after {
+  position: absolute;
+  content: ":";
+  right: 68px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.timebar {
+  margin-right: 10px;
+  color: white;
+  padding-left: 3px;
+  padding-right: 3px;
+  height: 207px;
+  width: 10px;
+  text-align: center;
+  line-height: 1.3;
+  display: inline-block;
+  background-color: #00cccc;
+  -webkit-box-shadow: 0.1px 0.1px 0px 0px #009999, 0.2px 0.2px 0px 0px #009999, 0.3px 0.3px 0px 0px #009999, 0.4px 0.4px 0px 0px #009999, 0.5px 0.5px 0px 0px #009999, 0.6px 0.6px 0px 0px #009999, 0.7px 0.7px 0px 0px #009999, 0.8px 0.8px 0px 0px #009999, 0.9px 0.9px 0px 0px #009999, 1px 1px 0px 0px #009999, 1.1px 1.1px 0px 0px #009999, 1.2px 1.2px 0px 0px #009999, 1.3px 1.3px 0px 0px #009999, 1.4px 1.4px 0px 0px #009999, 1.5px 1.5px 0px 0px #009999, 1.6px 1.6px 0px 0px #009999, 1.7px 1.7px 0px 0px #009999, 1.8px 1.8px 0px 0px #009999, 1.9px 1.9px 0px 0px #009999, 2px 2px 0px 0px #009999;
+          box-shadow: 0.1px 0.1px 0px 0px #009999, 0.2px 0.2px 0px 0px #009999, 0.3px 0.3px 0px 0px #009999, 0.4px 0.4px 0px 0px #009999, 0.5px 0.5px 0px 0px #009999, 0.6px 0.6px 0px 0px #009999, 0.7px 0.7px 0px 0px #009999, 0.8px 0.8px 0px 0px #009999, 0.9px 0.9px 0px 0px #009999, 1px 1px 0px 0px #009999, 1.1px 1.1px 0px 0px #009999, 1.2px 1.2px 0px 0px #009999, 1.3px 1.3px 0px 0px #009999, 1.4px 1.4px 0px 0px #009999, 1.5px 1.5px 0px 0px #009999, 1.6px 1.6px 0px 0px #009999, 1.7px 1.7px 0px 0px #009999, 1.8px 1.8px 0px 0px #009999, 1.9px 1.9px 0px 0px #009999, 2px 2px 0px 0px #009999;
+  margin-top: 187px;
+  position: relative;
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
+  top: 0px;
+}
+
+.timebar:before {
+  content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A";
+}
+
+.timebar.n1 {
+  top: calc(-20.8px * 1);
+}
+
+.timebar.n2 {
+  top: calc(-20.8px * 2);
+}
+
+.timebar.n3 {
+  top: calc(-20.8px * 3);
+}
+
+.timebar.n4 {
+  top: calc(-20.8px * 4);
+}
+
+.timebar.n5 {
+  top: calc(-20.8px * 5);
+}
+
+.timebar.n6 {
+  top: calc(-20.8px * 6);
+}
+
+.timebar.n7 {
+  top: calc(-20.8px * 7);
+}
+
+.timebar.n8 {
+  top: calc(-20.8px * 8);
+}
+
+.timebar.n9 {
+  top: calc(-20.8px * 9);
+}
+
+.timebar#hour1 {
+  height: 62px;
+  margin-top: 42px;
+}
+
+.timebar#hour1:before {
+  content: "0\A 1\A 2";
+}
+
+.timebar#hour1.n1 {
+  top: calc(-21px * 1);
+}
+
+.timebar#hour1.n2 {
+  top: calc(-21px * 2);
+}
+
+.timebar:last-child {
+  margin-right: 0px;
+}
+/*# sourceMappingURL=style.css.map */
