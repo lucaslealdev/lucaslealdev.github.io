@@ -1,0 +1,65 @@
+body{
+  text-align: center;
+}
+.bg{
+  background-image:url('hqdefault.jpg');
+  display: inline-block;
+  width:480px;
+  height: 360px;
+}
+#piao{
+  width: 225px;
+  height: 225px;
+  position:relative;
+  display: inline-block;
+  top: 52px;
+  left: 47px;
+}
+#piao::before{
+  content:"";
+  position:absolute;
+  z-index:1;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  border-radius:100%;
+  box-sizing: border-box;
+}
+#piao .container{
+  position:relative;
+  top:2px;
+  left:2px;
+  width:calc(100% - 5px);
+  height:calc(100% - 5px);
+  border-radius:50%;
+  background:rgb(40,40,40);
+  overflow:hidden;
+  border-radius:100%;
+  position: relative;
+}
+#piao .container .pokemons{
+  width:8000px;
+  height:100%;
+  position:relative;
+  left: -479px;
+}
+#piao .pokemons.animado{
+  animation: roda 11s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.pokemons .poke{
+  width:220px;
+  height:100%;
+  border-right:2px solid rgb(133, 133, 133);
+  box-sizing:border-box;
+}
+@keyframes roda {
+  0% {left: -479px;}
+  2% {left: -479px;}
+  10% {left: -259px;}
+  80% {left: -7639px;}
+  100% {left: -7519px;}
+}
