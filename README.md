@@ -11,4 +11,4 @@ Olá galerinha! Aqui eu publico tech-demos e conceitos.
 
 [Relógio animado](https://lucaslealdev.github.io/animated-clock/) - Relógio utilizando pseudo-elementos, flex, loops, e timeout.
 
-[Relógio animado](https://lucaslealdev.github.io/piao-pokemon/) - Pião da casa própria com pokemons.
+[Pião Pokémon](https://lucaslealdev.github.io/piao-pokemon/) - Pião da casa própria com pokemons.
