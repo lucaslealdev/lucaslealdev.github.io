@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéTrunfo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="corpo">
+    <div id="bemvindo">
+        <button type="button" onclick="corpo.className='started';bemvindo.remove();pPlim();musica.play();">INICIAR</button>
+    </div>
+    <div id="fim_msg">
+        <h1 id="mensagem"></h1>
+        <button type="button" onclick="location.reload(true)">Jogar novamente!</button>
+    </div>
+    <h1>PokéTrunfo</h1>
+    <div id="arena">
+        <div class="left coluna" id="jogador1"></div>
+        <div class="right coluna" id="jogador2"></div>
+    </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <audio id="plim">
+        <source src="plim.mp3"></source>
+        <source src="plim.ogg"></source>
+    </audio>
+    <audio id="musica" loop>
+        <source src="musica.mp3"></source>
+        <source src="musica.ogg"></source>
+    </audio>
+    <audio id="fu">
+        <source src="fu.mp3"></source>
+        <source src="fu.ogg"></source>
+    </audio>
+</body>
+</html>
