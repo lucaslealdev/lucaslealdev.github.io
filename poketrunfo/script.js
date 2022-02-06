@@ -3,6 +3,7 @@ const API_BASE = 'https://pokeapi.co/api/v2/pokemon/';
 let base = [];
 
 const pPlim = () => (plim.currentTime = 0) || plim.play();
+const pErr = () => (err.currentTime = 0) || err.play();
 const pFu = () =>  (fu.currentTime = 0) || fu.play();
 
 const json = async (url) => fetch(url).then((o) => o.json());
@@ -65,6 +66,7 @@ const checkFinish = () => {
 
 const combate = (e)=>{
     corpo.style.pointerEvents = 'none';
+    const clicado = e.target.closest('.coluna').id == 'jogador1' ? 1 : 2;
     const propriedade = e.target.dataset.propriedade;
     let vencedor = 0;
     switch (true) {
@@ -74,6 +76,11 @@ const combate = (e)=>{
         case (parseInt(jogador1.firstElementChild.dataset[propriedade]) < parseInt(jogador2.firstElementChild.dataset[propriedade])):
             vencedor = 2;
             break;
+    }
+    if (vencedor === clicado){
+        pPlim();
+    }else if(vencedor){
+        pErr();
     }
 
     switch (vencedor) {
@@ -124,6 +131,7 @@ const createCard = (dados) => {
 window.onload = async () => {
     fu.volume = 0.3;
     plim.volume = 0.3;
+    err.volume = 0.3;
     musica.volume = 0.1;
     base = await getPokemons(40);
     base.forEach((pokemon, i) => (i%2==0) ? jogador1.appendChild(createCard(pokemon)) : jogador2.appendChild(createCard(pokemon)) );
