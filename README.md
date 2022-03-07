@@ -14,3 +14,7 @@ Olá galerinha! Aqui eu publico tech-demos e conceitos.
 [Pião Pokémon](https://lucaslealdev.github.io/piao-pokemon/) - Pião da casa própria com pokemons.
 
 [PokéTrunfo](https://lucaslealdev.github.io/poketrunfo/) - Uma simulação de jogo trunfo com Pokémons.
+
+# Scrimbas
+
+[Manipulando DOM apenas com CSS](https://scrimba.com/scrim/cdpybrsq) - Como utilizar apenas CSS para disparar eventos de clique que manipulam o DOM
