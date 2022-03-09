@@ -15,6 +15,8 @@ Olá galerinha! Aqui eu publico tech-demos e conceitos.
 
 [PokéTrunfo](https://lucaslealdev.github.io/poketrunfo/) - Uma simulação de jogo trunfo com Pokémons.
 
+[Pixels art sem JS](https://github.com/lucaslealdev/pixels-art-no-js) - Uma forma de realizar o projeto Pixels Art sem utilizar nenhum JS.
+
 # Scrimbas
 
 [Manipulando DOM apenas com CSS](https://scrimba.com/scrim/cdpybrsq) - Como utilizar apenas CSS para disparar eventos de clique que manipulam o DOM
