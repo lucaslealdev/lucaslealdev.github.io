@@ -19,6 +19,8 @@ Olá galerinha! Aqui eu publico tech-demos e conceitos.
 
 # Scrimbas
 
+[Disparos assíncronos](https://scrimba.com/scrim/czvJ77hr) - Será que os eventos acontecem na ordem em que aparecem no código?
+
 [Manipulando DOM apenas com CSS](https://scrimba.com/scrim/cdpybrsq) - Como utilizar apenas CSS para disparar eventos de clique que manipulam o DOM
 
 [Hofs são funções normais e eu posso provar](https://scrimba.com/scrim/c4zgDpT6) - Alinhamento de que Hofs são simples de se utilizar
