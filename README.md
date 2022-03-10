@@ -26,3 +26,5 @@ Olá galerinha! Aqui eu publico tech-demos e conceitos.
 [Menu mobile sem JS](https://scrimba.com/scrim/cg9Z9Ju4) - Como utilizar a ferramenta do scrimba acima para criar um menu que surge e desaparece
 
 [Hofs são funções normais e eu posso provar](https://scrimba.com/scrim/c4zgDpT6) - Alinhamento de que Hofs são simples de se utilizar
+
+[Operador unário](https://scrimba.com/scrim/cNN3qeAR) - Utilizando o operador unário de maneira criativa e performática com arrays/objetos
