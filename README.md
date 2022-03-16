@@ -28,3 +28,7 @@ Olá galerinha! Aqui eu publico tech-demos e conceitos.
 [Hofs são funções normais e eu posso provar](https://scrimba.com/scrim/c4zgDpT6) - Alinhamento de que Hofs são simples de se utilizar
 
 [Operador unário](https://scrimba.com/scrim/cNN3qeAR) - Utilizando o operador unário de maneira criativa e performática com arrays/objetos
+
+[Quem é o acumulador?](https://scrimba.com/scrim/cGNQZbfG) - Demonstração de como o acumulador se comporta no uso do `reduce`.
+
+[Não tem como desestruturar sem estruturar](https://scrimba.com/scrim/cJqp9rtZ) - Explicação sobre a sintaxe e como o interpretador do JS entende a desestruturação igual ele entende a estruturação.
