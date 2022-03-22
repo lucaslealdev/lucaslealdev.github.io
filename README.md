@@ -32,3 +32,5 @@ Olá galerinha! Aqui eu publico tech-demos e conceitos.
 [Quem é o acumulador?](https://scrimba.com/scrim/cGNQZbfG) - Demonstração de como o acumulador se comporta no uso do `reduce`.
 
 [Não tem como desestruturar sem estruturar](https://scrimba.com/scrim/cJqp9rtZ) - Explicação sobre a sintaxe e como o interpretador do JS entende a desestruturação igual ele entende a estruturação.
+
+[Filtros opcionais com HOFs](https://scrimba.com/scrim/cNNDzKHN) - Uma explicação breve de como usar a mecânica das HOFs de maneira opcional manipulando o retorno da função de callback.
