@@ -1,0 +1,77 @@
+body{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-align: center;
+}
+
+#pixelsart{margin-left: 15px;}
+
+.color{
+    width:100px;
+    height: 100px;
+    display: inline-block;
+    margin-right: 15px;
+    border:1px solid black;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    &.yellow{background: yellow;}
+    &.orange{background: orange;}
+    &.blue{background: blue;}
+    &.black{background: black;}
+}
+
+[name="picker"]{width: 0;height: 0;opacity: 0;margin: 0;padding: 0;border: 0;display: none;}
+
+input#orange:checked ~ .grid input[value=orange]{display: block;}
+input#yellow:checked ~ .grid input[value=yellow]{display: block;}
+input#blue:checked ~ .grid input[value=blue]{display: block;}
+input#black:checked ~ .grid input[value=black]{display: block;}
+
+
+input[value=orange]:checked ~ .pintura {background:orange;}
+input[value=yellow]:checked ~ .pintura {background:yellow;}
+input[value=blue]:checked ~ .pintura {background:blue;}
+input[value=black]:checked ~ .pintura {background:black;}
+
+.grid{
+    display: block;
+    margin:0 auto;
+    width: 241px;
+    font-size: 0px;
+    .pixel{
+        position: relative;
+        border:1px solid black;
+        border-right:0;
+        border-bottom:0;
+        display: inline-block;
+        width:40px;
+        height: 40px;
+        &:nth-child(5n+5){
+            border-right: 1px solid black;
+        }
+        &:nth-child(n+21){
+            border-bottom: 1px solid black;
+        }
+        input{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 2;
+            margin:0;
+            opacity: 0;
+            display: none;
+        }
+        .pintura{
+            background:white;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+}
