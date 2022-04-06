@@ -14,7 +14,7 @@ function update(){
     const second = ('0' + d.getSeconds()).slice(-2);
     const now = hour + minute + second;
     for (let index = 0; index < elems.length; index++) {
-        elems[index].className = `timebar n${now[index]}`;
+        elems[index].className = 'timebar n' + now[index];
     }
 }
 update();
