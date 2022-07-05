@@ -1,7 +1,50 @@
+@-webkit-keyframes carregando {
+  0% {
+    content: "{/////}";
+  }
+  20% {
+    content: "{~////}";
+  }
+  40% {
+    content: "{/~///}";
+  }
+  60% {
+    content: "{//~//}";
+  }
+  80% {
+    content: "{////~}";
+  }
+}
+@keyframes carregando {
+  0% {
+    content: "{/////}";
+  }
+  20% {
+    content: "{~////}";
+  }
+  40% {
+    content: "{/~///}";
+  }
+  60% {
+    content: "{//~//}";
+  }
+  80% {
+    content: "{////~}";
+  }
+}
+#carregando {
+  font-family: monospace;
+}
+#carregando::after {
+  content: "{/////}";
+  -webkit-animation: carregando 1s linear infinite alternate;
+          animation: carregando 1s linear infinite alternate;
+}
+
 html, body {
   margin: 0px;
   padding: 0px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 100%;
   height: 100%;
 }
@@ -12,8 +55,8 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background: #00871b;
-  background: linear-gradient(163deg, #00871b 0%, #038b1d 45%, #15c200 89%, #1bde00 100%);
+  background: rgb(0, 135, 27);
+  background: linear-gradient(163deg, rgb(0, 135, 27) 0%, rgb(3, 139, 29) 45%, rgb(21, 194, 0) 89%, rgb(27, 222, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -34,8 +77,7 @@ h1 {
   width: 300px;
   min-height: 100px;
   height: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
 }
 
@@ -48,43 +90,35 @@ h1 {
 }
 
 .left .card {
-  -webkit-transform: perspective(552px) rotateY(351deg) scale(0.9);
-          transform: perspective(552px) rotateY(351deg) scale(0.9);
+  transform: perspective(552px) rotateY(351deg) scale(0.9);
 }
-
 .left .card:first-child {
-  -webkit-transform: perspective(552px) rotateY(351deg);
-          transform: perspective(552px) rotateY(351deg);
+  transform: perspective(552px) rotateY(351deg);
 }
-
 .left .card:nth-child(n+6) {
-  z-index: calc(6*-1);
-  top: calc(10px + 10px * 6);
-  left: calc(50px + 5px * 6);
+  z-index: -6;
+  top: 70px;
+  left: 80px;
   pointer-events: none;
 }
-
 .left .card:nth-child(2) {
   z-index: calc(2*-1);
   top: calc(10px + 10px * 2);
   left: calc(50px + 5px * 2);
   pointer-events: none;
 }
-
 .left .card:nth-child(3) {
   z-index: calc(3*-1);
   top: calc(10px + 10px * 3);
   left: calc(50px + 5px * 3);
   pointer-events: none;
 }
-
 .left .card:nth-child(4) {
   z-index: calc(4*-1);
   top: calc(10px + 10px * 4);
   left: calc(50px + 5px * 4);
   pointer-events: none;
 }
-
 .left .card:nth-child(5) {
   z-index: calc(5*-1);
   top: calc(10px + 10px * 5);
@@ -93,43 +127,35 @@ h1 {
 }
 
 .right .card {
-  -webkit-transform: perspective(552px) rotateY(-351deg) scale(0.9);
-          transform: perspective(552px) rotateY(-351deg) scale(0.9);
+  transform: perspective(552px) rotateY(-351deg) scale(0.9);
 }
-
 .right .card:first-child {
-  -webkit-transform: perspective(552px) rotateY(-351deg);
-          transform: perspective(552px) rotateY(-351deg);
+  transform: perspective(552px) rotateY(-351deg);
 }
-
 .right .card:nth-child(n+6) {
-  z-index: calc(6*-1);
-  top: calc(10px + 10px * 6);
-  left: calc(15px - 5px * 6);
+  z-index: -6;
+  top: 70px;
+  left: -15px;
   pointer-events: none;
 }
-
 .right .card:nth-child(2) {
   z-index: calc(2*-1);
   top: calc(10px + 10px * 2);
   left: calc(15px - 5px * 2);
   pointer-events: none;
 }
-
 .right .card:nth-child(3) {
   z-index: calc(3*-1);
   top: calc(10px + 10px * 3);
   left: calc(15px - 5px * 3);
   pointer-events: none;
 }
-
 .right .card:nth-child(4) {
   z-index: calc(4*-1);
   top: calc(10px + 10px * 4);
   left: calc(15px - 5px * 4);
   pointer-events: none;
 }
-
 .right .card:nth-child(5) {
   z-index: calc(5*-1);
   top: calc(10px + 10px * 5);
@@ -138,10 +164,9 @@ h1 {
 }
 
 .card {
-  -webkit-transition: all 900ms ease;
   transition: all 900ms ease;
   z-index: 1;
-  border: 3px solid #f2ffc2;
+  border: 3px solid rgb(242, 255, 194);
   position: absolute;
   left: calc(50% - 118px);
   width: 220px;
@@ -149,39 +174,34 @@ h1 {
   height: 0px;
   padding-bottom: 130%;
   border-radius: 10px;
-  background: #fffc1e;
-  background: linear-gradient(138deg, #fffc1e 0%, yellow 36%, #ffffda 36%, #ffffda 39%, yellow 39%, #e3e800 100%);
+  background: rgb(255, 252, 30);
+  background: linear-gradient(138deg, rgb(255, 252, 30) 0%, rgb(255, 255, 0) 36%, rgb(255, 255, 218) 36%, rgb(255, 255, 218) 39%, rgb(255, 255, 0) 39%, rgb(227, 232, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
   margin: 0 auto;
 }
-
 .card:first-child {
-  -webkit-box-shadow: 5px 5px 18px 3px rgba(0, 0, 0, 0.24);
-          box-shadow: 5px 5px 18px 3px rgba(0, 0, 0, 0.24);
+  box-shadow: 5px 5px 18px 3px rgba(0, 0, 0, 0.24);
   top: 0px;
 }
-
 .card:nth-child(1) {
   z-index: 3;
 }
-
 .card:before {
   content: "";
   position: absolute;
   top: 5px;
   left: 5px;
   border-radius: 9px;
-  background: white;
+  background: rgb(255, 255, 255);
   width: 95%;
   height: 100px;
   opacity: 0.3;
-  background: linear-gradient(138deg, white 0%, rgba(255, 255, 255, 0.308561) 100%);
+  background: linear-gradient(138deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.3085609244) 100%);
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .card img {
   display: block;
   margin: 0 auto;
@@ -194,38 +214,30 @@ h1 {
   background: white;
   border-radius: 8px;
   padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .card p {
   padding-left: 15px;
   padding-top: 8px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0px;
 }
-
 .card ul {
   margin-top: 25px;
   list-style-type: none;
   padding-left: 0px;
 }
-
 .card ul li {
   padding: 3px;
   padding-left: 20px;
   cursor: pointer;
 }
-
 .card ul li strong {
   pointer-events: none;
 }
-
 .card ul li:nth-child(odd) {
   background: rgba(255, 255, 255, 0.3);
 }
-
 .card ul li:hover {
   background: rgba(255, 255, 255, 0.7);
 }
@@ -236,20 +248,19 @@ h1 {
   left: 0px;
   width: 100vw;
   height: 100vh;
-  background: #00871b;
-  background: linear-gradient(163deg, #00871b 0%, #038b1d 45%, #15c200 89%, #1bde00 100%);
+  background: rgb(0, 135, 27);
+  background: linear-gradient(163deg, rgb(0, 135, 27) 0%, rgb(3, 139, 29) 45%, rgb(21, 194, 0) 89%, rgb(27, 222, 0) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 9999;
 }
-
 #bemvindo button, #fim_msg button {
   display: block;
   margin: 0 auto;
   width: 200px;
   height: 80px;
   border: none;
-  background: #b10000;
+  background: rgb(177, 0, 0);
   border-radius: 4px;
   color: white;
   font-weight: bold;
@@ -257,7 +268,6 @@ h1 {
   cursor: pointer;
   margin-top: 10%;
 }
-
 #bemvindo h1, #fim_msg h1 {
   display: block;
   margin: 0 auto;
@@ -266,7 +276,6 @@ h1 {
   font-size: 40px;
   margin-top: 10%;
 }
-
 #bemvindo h1 + button, #fim_msg h1 + button {
   margin-top: 30px;
 }
@@ -298,33 +307,28 @@ h1 {
   0% {
     z-index: 999;
     left: calc(50% - 118px);
-    -webkit-transform: perspective(552px) rotateY(351deg);
-            transform: perspective(552px) rotateY(351deg);
+    transform: perspective(552px) rotateY(351deg);
   }
   5% {
     z-index: 999;
     left: calc(50% - 118px);
-    -webkit-transform: perspective(552px) rotateY(351deg);
-            transform: perspective(552px) rotateY(351deg);
+    transform: perspective(552px) rotateY(351deg);
   }
   20% {
     z-index: 999;
     left: -60%;
-    -webkit-transform: perspective(552px) rotateY(351deg);
-            transform: perspective(552px) rotateY(351deg);
+    transform: perspective(552px) rotateY(351deg);
   }
   50% {
     z-index: -999;
     left: -60%;
-    -webkit-transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
-            transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
+    transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
   }
   100% {
     z-index: -999;
     left: 21%;
     top: 20%;
-    -webkit-transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
-            transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
+    transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
   }
 }
 
@@ -332,101 +336,83 @@ h1 {
   0% {
     z-index: 999;
     left: calc(50% - 118px);
-    -webkit-transform: perspective(552px) rotateY(351deg);
-            transform: perspective(552px) rotateY(351deg);
+    transform: perspective(552px) rotateY(351deg);
   }
   5% {
     z-index: 999;
     left: calc(50% - 118px);
-    -webkit-transform: perspective(552px) rotateY(351deg);
-            transform: perspective(552px) rotateY(351deg);
+    transform: perspective(552px) rotateY(351deg);
   }
   20% {
     z-index: 999;
     left: -60%;
-    -webkit-transform: perspective(552px) rotateY(351deg);
-            transform: perspective(552px) rotateY(351deg);
+    transform: perspective(552px) rotateY(351deg);
   }
   50% {
     z-index: -999;
     left: -60%;
-    -webkit-transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
-            transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
+    transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
   }
   100% {
     z-index: -999;
     left: 21%;
     top: 20%;
-    -webkit-transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
-            transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
+    transform: perspective(552px) rotateY(351deg) rotate(5deg) scale(0.8);
   }
 }
-
 @-webkit-keyframes fim_r {
   0% {
     z-index: 999;
     left: calc(50% - 118px);
-    -webkit-transform: perspective(552px) rotateY(-351deg);
-            transform: perspective(552px) rotateY(-351deg);
+    transform: perspective(552px) rotateY(-351deg);
   }
   15% {
     z-index: 999;
     left: calc(50% + 90px);
-    -webkit-transform: perspective(552px) rotateY(-351deg) scale(0.9);
-            transform: perspective(552px) rotateY(-351deg) scale(0.9);
+    transform: perspective(552px) rotateY(-351deg) scale(0.9);
   }
   30% {
     z-index: 999;
     left: 75%;
-    -webkit-transform: perspective(552px) rotateY(-351deg) scale(0.8);
-            transform: perspective(552px) rotateY(-351deg) scale(0.8);
+    transform: perspective(552px) rotateY(-351deg) scale(0.8);
   }
   50% {
     z-index: -999;
     left: 75%;
-    -webkit-transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
-            transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
+    transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
   }
   100% {
     z-index: -999;
     left: 21%;
     top: 20%;
-    -webkit-transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
-            transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
+    transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
   }
 }
-
 @keyframes fim_r {
   0% {
     z-index: 999;
     left: calc(50% - 118px);
-    -webkit-transform: perspective(552px) rotateY(-351deg);
-            transform: perspective(552px) rotateY(-351deg);
+    transform: perspective(552px) rotateY(-351deg);
   }
   15% {
     z-index: 999;
     left: calc(50% + 90px);
-    -webkit-transform: perspective(552px) rotateY(-351deg) scale(0.9);
-            transform: perspective(552px) rotateY(-351deg) scale(0.9);
+    transform: perspective(552px) rotateY(-351deg) scale(0.9);
   }
   30% {
     z-index: 999;
     left: 75%;
-    -webkit-transform: perspective(552px) rotateY(-351deg) scale(0.8);
-            transform: perspective(552px) rotateY(-351deg) scale(0.8);
+    transform: perspective(552px) rotateY(-351deg) scale(0.8);
   }
   50% {
     z-index: -999;
     left: 75%;
-    -webkit-transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
-            transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
+    transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
   }
   100% {
     z-index: -999;
     left: 21%;
     top: 20%;
-    -webkit-transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
-            transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
+    transform: perspective(552px) rotateY(-351deg) rotate(-5deg) scale(0.8);
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

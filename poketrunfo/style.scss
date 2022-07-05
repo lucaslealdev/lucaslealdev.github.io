@@ -1,3 +1,28 @@
+@keyframes carregando {
+    0% {
+        content: '{/////}';
+    }
+    20% {
+        content: '{~////}';
+    }
+    40% {
+        content: '{/~///}'
+    }
+    60% {
+        content: '{//~//}'
+    }
+    80% {
+        content: '{////~}'
+    }
+}
+#carregando {
+    font-family: monospace;
+    &::after {
+        content: "{/////}";
+        animation: carregando 1s linear infinite alternate;
+    }
+}
+
 html,body{
     margin: 0px;
     padding:0px;

@@ -32,11 +32,22 @@ const getPokemon = async (numero) => {
     return retorno;
 }
 
+const preloadImage = src => {
+  return new Promise(r => {
+    const image = new Image()
+    image.onload = r;
+    image.onerror = r;
+    image.src = src;
+})};
+
 const getPokemons = async (qty) => {
     pokemons = [];
     for (let index = 0; index < qty; index++) {
         pokemons.push(await getPokemon(random(1,151)));
     }
+    await Promise.all(pokemons.map(x => preloadImage(x.img)))
+    carregando.style.display = "none";
+    btnJogar.style.display = "block";
     return pokemons;
 }
 
