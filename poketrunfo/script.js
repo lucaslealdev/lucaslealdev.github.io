@@ -12,7 +12,7 @@ const getStat = (stat, arr) => arr.find((item)=>item.stat.name==stat).base_stat;
 
 const ucfirst = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
-const pic = (numero) => `https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${numero}.svg`;
+const pic = (numero) => `https://raw.githubusercontent.com/jnovack/pokemon-svg/master/svg/{numero}.svg`;
 
 const random = (min, max) => Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) + Math.ceil(min);
 
