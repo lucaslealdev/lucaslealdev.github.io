@@ -232,6 +232,7 @@ c-row c-column[d-1] {
 }
 a {
   color: #b300b6;
+  -webkit-text-stroke-color: rgba(179, 0, 182, 0.5);
   text-decoration: none;
   font-weight: 300;
 }
@@ -273,6 +274,7 @@ header nav ul li a {
   padding: 0 10px 0 10px;
   text-decoration: none;
   color: rgb(232, 232, 232);
+  -webkit-text-stroke-color: rgba(232, 232, 232, 0.5);
   line-height: 64px;
   display: inline-block;
   position: relative;

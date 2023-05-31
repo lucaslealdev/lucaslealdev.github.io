@@ -99,6 +99,7 @@ $white: rgb(232, 232, 232);
 
 a {
   color: $mainPurple;
+  -webkit-text-stroke-color: rgba($mainPurple, 0.5);
   text-decoration: none;
   font-weight: 300;
 }
@@ -140,6 +141,7 @@ header {
           padding: 0 10px 0 10px;
           text-decoration: none;
           color: $white;
+          -webkit-text-stroke-color: rgba($white, 0.5);
           line-height: 64px;
           display: inline-block;
           position: relative;
