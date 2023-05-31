@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Leal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <c-container>
+      <c-row>
+        <c-column d-12>
+          <h1>@lucaslealdev</h1>
+          <nav>
+            <ul>
+              <li><a href="#ellegant">Ellegant CSS Framework</a></li>
+              <li><a href="#coolfee">Coolfee JS Platform</a></li>
+              <li><a href="#ukecifras">Ukecifras ukulele chords</a></li>
+              <li><a href="#howToFind">How to find me</a></li>
+            </ul>
+          </nav>
+        </c-column>
+      </c-row>
+    </c-container>
+  </header>
+  <main>
+    <c-container>
+      <c-row>
+        <c-column d-3 md-4 sm-12>
+          <section id="profile">
+            <div class="profile">
+              <img src="https://github.com/lucaslealdev.png" alt="Lucas Leal profile picture">
+            </div>
+            <h1>Lucas Leal</h1>
+            <p>Solving human problems with software and education.</p>
+            <p>Educator at <a href="https://betrybe.com" target="_blank">@betrybe</a>, CEO at <a href="https://ukecifras.com.br" target="_blank">@ukecifras</a>, podcaster at <a href="https://jogandocasualmente.com.br" target="_blank">@jcasualmente</a>.</p>
+            <nav>
+              <ul>
+                <li>📍 Caçapava/SP, Brazil</li>
+                <li><a href="https://github.com/lucaslealdev" target="_blank">🐱 Github</a></li>
+                <li><a href="https://twitter.com/lucaslealdev" target="_blank">🐦 Twitter</a></li>
+                <li><a href="https://instagram.com/lucaslealdev" target="_blank">📷 Instagram</a></li>
+              </ul>
+            </nav>
+          </section>
+        </c-column>
+        <c-column d-9 md-8 sm-12>
+          <section id="content">
+            <article id="about">
+              <h1>A Fullstack Web Developer</h1>
+              <p>
+                Describing myself can be a challenging task, but not for the reasons you might expect.
+                I have experience as a software developer across different platforms, being an entrepreneur with a drive for innovation,
+                a content creator who seeks to inspire, a dedicated promoter of free software, an educator passionate about sharing knowledge,
+                and an individual who doesn't easily conform to societal norms.
+                It's important to note that I am also a Christian, and my faith revolves around the belief that God is infinitely
+                merciful and loving above all things. This belief shapes my perspective and influences how I approach my work
+                and interactions with others as everything I do is for Him. I find immense joy in guiding and inspiring others, knowing that love and
+                compassion are at the core of everything I do.
+              </p>
+            </article>
+            <article id="ellegant">
+              <h1>Ellegant CSS Framework</h1>
+              <p>
+                Ellegant is a CSS framework that aims to provide user interaction with very little or no Javascript at all.<br>
+                With inputs and labels, Ellegant targets elements providing a fast and clean user experience even on low-end mobile devices.<br>
+                You can see examples and lean how to contribute at the <a href="https://ellegantcss.github.io/" target="_blank">Ellegant framework website</a>.
+              </p>
+            </article>
+            <article id="coolfee">
+              <h1>Coolfee JS Platform</h1>
+              <p>
+                Coolfee (it reads coffee) is a user-friendly web application designed to enhance the JavaScript learning experience.<br>
+                The platform offers a seamless environment where teachers and students can effortlessly create tests and code using only the web browser.<br>
+                You can see it in action at <a href="https://coolfee.github.io/" target="_blank">Coolfee platform</a>.
+              </p>
+            </article>
+            <article id="ukecifras">
+              <h1>Ukecifras ukulele chords</h1>
+              <p>
+                Ukecifras is a remarkable website dedicated to providing a comprehensive platform for ukulele enthusiasts of all skill levels.<br>
+                Along the website, Ukeciras has a PWA application, which allows users to download chords and play anywhere even without internet access.<br>
+                With its wealth of features and resources, Ukecifras has become an invaluable hub for anyone looking to learn, practice, or explore the world of ukulele.<br>
+                You can see it in action at <a href="https://ukecifras.com.br/" target="_blank">Ukecifras website</a>.
+              </p>
+            </article>
+            <article id="howToFind">
+              <h1>How to find me</h1>
+              <p>
+                Usually you may find me a couch, watching some TV shows and movies, playing some games or creating a new development solution.<br>
+                In addition to that, you may reach me at <a href="https://twitter.com/lucaslealdev" target="_blank">Twitter</a> 😉
+              </p>
+            </article>
+          </section>
+        </c-column>
+      </c-row>
+    </c-container>
+    <footer>
+      <c-container>
+        <c-row>
+          <c-column d-12>
+            <p>Follow: <a href="https://github.com/lucaslealdev" target="_blank">Github</a> and <a href="https://twitter.com/lucaslealdev" target="_blank">Twitter</a>.</p>
+            <p>2023 Lucas Leal, hosted using Github Pages.</p>
+          </c-column>
+        </c-row>
+      </c-container>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('header a').forEach(e => {
+      e.addEventListener('click', (event) => {
+        const t = document.querySelector(event.target.getAttribute("href"));
+        t.classList.add('bg');
+        setTimeout(() => t.classList.remove('bg'), 800);
+      });
+    });
+  </script>
+</body>
+</html>
