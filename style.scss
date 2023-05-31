@@ -202,21 +202,22 @@ img {max-width: 100%;}
     left: 0;
     background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
     transform: translate3d(0px, 0px, 0) scale(0.95);
-    filter: blur(20px);
-    opacity: 0.5;
+    filter: blur(15px);
     transition: opacity 0.3s;
-    border-radius: 40px;
+    border-radius: 40px 20px;
     animation-name: rotate;
-    animation-duration: 9s;
+    animation-duration: 6s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
 }
 
 @keyframes rotate {
-  0% {transform: translate3d(0px, 0px, 0) scale(0.95) rotate(0deg);opacity: 0.5;}
-  50% {transform: translate3d(0px, 0px, 0) scale(0.95) rotate(180deg);opacity: 0.5;}
-  100% {transform: translate3d(0px, 0px, 0) scale(0.95) rotate(360deg);opacity: 0.5;}
+  0% {transform: translate3d(0px, 0px, 0) scale(0.95) rotate(0deg);opacity: 1;}
+  50% {transform: translate3d(0px, 0px, 0) scale(1) rotate(180deg);opacity: 0.5;}
+  54% {transform: translate3d(0px, 0px, 0) scale(1.1) rotate(180deg);opacity: 0.3;}
+  65% {transform: translate3d(0px, 0px, 0) scale(0.95) rotate(220deg);opacity: 0.3;}
+  100% {transform: translate3d(0px, 0px, 0) scale(0.95) rotate(360deg);opacity: 1;}
 }
 
 #profile {
