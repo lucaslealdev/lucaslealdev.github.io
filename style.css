@@ -400,6 +400,9 @@ img {
 }
 @media only screen and (max-width: 767px) {
   #profile {
+    border-bottom: 1px solid #263545;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
     border-right: 0;
   }
 }
@@ -449,5 +452,10 @@ article.bg {
   header nav {
     display: none;
   }
+}
+h1 a {
+  color: white;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */
