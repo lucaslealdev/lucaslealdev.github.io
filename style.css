@@ -458,4 +458,92 @@ h1 a {
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
   font-weight: 400;
 }
+
+main a {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  top: -0.1em;
+  transition: transform 300ms ease;
+}
+main a:hover {
+  transform: scale(1.06);
+}
+
+main a:hover::before, main a:hover::after {
+  content: "*    *   * *    *   * *    *   * *    *   * *    *   * *    *   *";
+  font-size: 14px;
+  white-space: pre;
+  color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  -webkit-animation-name: falling;
+          animation-name: falling;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+}
+
+main a:hover::before {
+  top: 2px;
+  left: 15px;
+  -webkit-animation-name: falling2;
+          animation-name: falling2;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+@-webkit-keyframes falling {
+  from {
+    transform: translate(1px, -3px);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(21px, 21px);
+    opacity: 0;
+  }
+}
+
+@keyframes falling {
+  from {
+    transform: translate(1px, -3px);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(21px, 21px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes falling2 {
+  from {
+    transform: translate(6px, -4px);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(2px, 21px);
+    opacity: 0;
+  }
+}
+@keyframes falling2 {
+  from {
+    transform: translate(6px, -4px);
+    opacity: 0.9;
+  }
+  to {
+    transform: translate(2px, 21px);
+    opacity: 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
