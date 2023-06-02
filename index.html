@@ -33,7 +33,7 @@
       <c-row>
         <c-column d-3 md-4 sm-12>
           <section id="profile">
-            <div class="profile">
+            <div class="profile" data-anim="0">
               <img src="https://github.com/lucaslealdev.png" alt="Lucas Leal profile picture">
             </div>
             <h1>Lucas Leal</h1>
@@ -119,6 +119,13 @@
         setTimeout(() => t.classList.remove('bg'), 800);
       });
     });
+    let start = 0;
+    setInterval( () => {
+      start++;
+      if (start === 4) start = 0;
+      const e = document.querySelector('.profile');
+      e.dataset.anim = start;
+    }, 6000);
   </script>
 </body>
 </html>
