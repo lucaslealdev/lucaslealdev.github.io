@@ -121,10 +121,12 @@
     });
     let start = 0;
     setInterval( () => {
+      const timing = Math.floor(Math.random() * (3000 - 1500 +1) + 1500);
       start++;
       if (start === 4) start = 0;
       const e = document.querySelector('.profile');
       e.dataset.anim = start;
+      e.style.animationDuration = `${timing}ms`;
     }, 6000);
   </script>
 </body>
