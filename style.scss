@@ -120,6 +120,7 @@ body {
 }
 
 header {
+  background-color: $mainGray;
   border-bottom: 1px solid $mainBlue;
   display: flex;
   c-column {
@@ -301,7 +302,17 @@ article {
 
 article.bg {
   transition: none;
-  background-color: rgba(255, 255, 255, 0.2);
+  animation: blink 600ms linear;
+}
+
+@keyframes blink {
+  0% {background-color: transparent;}
+  3% {background-color: rgba(255, 255, 255, 0.2);}
+  15% {background-color: rgba(255, 255, 255, 0.2);}
+  16% {background-color: transparent;}
+  40% {background-color: transparent;}
+  41% {background-color: rgba(255, 255, 255, 0.2);}
+  100% {background-color: rgba(255, 255, 255, 0.2);}
 }
 
 @media only screen and (max-width: 991px) {
@@ -364,4 +375,38 @@ main a:hover::before {
 @keyframes falling2 {
   from {transform: translate(6px, -4px);opacity: 0.9;}
   to {transform: translate(2px, 21px);opacity: 0;}
+}
+
+#welcome {
+  text-align: center;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px + 100vw / 100);
+}
+
+body.youShouldScroll {
+  header, main {
+    position: relative;
+    z-index: 1;
+    animation: ping 1.8s linear  3s infinite;
+    top: 0;
+  }
+}
+
+@keyframes ping {
+  0% {top: 0;opacity: 1;}
+
+  10% {top: 0;opacity: 1;}
+  15% {top: -60px;}
+  25% {top: -80px;}
+  30% {top: 0px;opacity: 1;}
+
+  35% {top: 0;opacity: 1;}
+  40% {top: -60px;}
+  50% {top: -80px;}
+  55% {top: 0px;opacity: 1;}
+
+  100% {top: 0;}
 }

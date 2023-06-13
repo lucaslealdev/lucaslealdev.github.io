@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <article id="welcome">
+    <p><strong>Hi!</strong> I'm Lucas, and you're not (probably) 😝</p>
+  </article>
   <header>
     <c-container>
       <c-row>
@@ -54,14 +57,7 @@
             <article id="about">
               <h1>A Fullstack Web Developer</h1>
               <p>
-                Describing myself can be a challenging task, but not for the reasons you might expect.
-                I have experience as a software developer across different platforms, being an entrepreneur with a drive for innovation,
-                a content creator who seeks to inspire, a dedicated promoter of free software, an educator passionate about sharing knowledge,
-                and an individual who doesn't easily conform to societal norms.
-                It's important to note that I am also a Christian, and my faith revolves around the belief that God is infinitely
-                merciful and loving above all things. This belief shapes my perspective and influences how I approach my work
-                and interactions with others as everything I do is for Him. I find immense joy in guiding and inspiring others, knowing that love and
-                compassion are at the core of everything I do.
+                Describing myself can be a challenging task, but not for the reasons you might expect. I have experience as a software developer across different platforms, being an entrepreneur with a drive for innovation, a content creator who seeks to inspire, a dedicated promoter of free software, an educator passionate about sharing knowledge, and an individual who doesn't easily conform to societal norms. It's important to note that I am also a Christian, and my faith revolves around the belief that God is infinitely merciful and loving above all things. This belief shapes my perspective and influences how I approach my work and interactions with others as everything I do is for Him. I find immense joy in guiding and inspiring others, knowing that love and compassion are at the core of everything I do.
               </p>
             </article>
             <article id="ellegant">
@@ -69,7 +65,7 @@
               <p>
                 Ellegant is a CSS framework that aims to provide user interaction with very little or no Javascript at all.<br>
                 With inputs and labels, Ellegant targets elements providing a fast and clean user experience even on low-end mobile devices.<br>
-                You can see examples and lean how to contribute at the <a href="https://ellegantcss.github.io/" target="_blank">Ellegant framework website</a>.
+                You can see examples and learn how to contribute at the <a href="https://ellegantcss.github.io/" target="_blank">Ellegant framework website</a>.
               </p>
             </article>
             <article id="coolfee">
@@ -112,11 +108,20 @@
     </footer>
   </main>
   <script>
+    const blink = (selector, delay = 800) => {
+      let t;
+      try {
+        t = document.querySelector(selector);
+      } catch (error) {
+        return;
+      }
+      if (!t) return;
+      setTimeout(() => t.classList.add('bg'), delay);
+      setTimeout(() => t.classList.remove('bg'), delay + 800);
+    };
     document.querySelectorAll('header a').forEach(e => {
       e.addEventListener('click', (event) => {
-        const t = document.querySelector(event.target.getAttribute("href"));
-        t.classList.add('bg');
-        setTimeout(() => t.classList.remove('bg'), 800);
+        blink(event.target.getAttribute("href"));
       });
     });
     let start = 0;
@@ -128,6 +133,53 @@
       e.dataset.anim = start;
       e.style.animationDuration = `${timing}ms`;
     }, 6000);
+
+    const isTouchDevice = (('ontouchstart' in window) ||
+    (navigator.maxTouchPoints > 0) ||
+    (navigator.msMaxTouchPoints > 0)
+    );
+
+    const scroll = {
+      to: (start, elem, pos, originalPos = false) => {
+        if (originalPos === false) originalPos = pos;
+        let y = elem.scrollY;
+        y += Math.round( ( pos - y ) * 0.3 );
+        const seconds = (new Date().getTime() - start) / 1000;
+        if (y > originalPos
+          || Math.abs(y-pos) <= 2
+          || seconds > 0.6
+        ) {
+          window.scrollTo({top: pos, behavior: 'instant'});
+          return;
+        }
+        window.scrollTo({top: y, behavior: 'instant'});
+        setTimeout(scroll.to, 40, start, elem, pos, originalPos);
+      },
+      action: () => {
+        if (window.scrollY === 0) return;
+        document.body.classList.remove('youShouldScroll');
+        const start = new Date().getTime();
+        scroll.to(start, window, document.querySelector('header').getBoundingClientRect().top + 70);
+        document.removeEventListener("scroll", scroll.action);
+      },
+      cancel: () => {
+        document.removeEventListener("scroll", scroll.action);
+        document.body.classList.remove('youShouldScroll');
+      },
+    };
+
+    if (!window.location.hash && !isTouchDevice) {
+      document.body.classList.add('youShouldScroll');
+      document.addEventListener("scroll", scroll.action);
+      document.querySelectorAll('header a').forEach((link) => link
+        .addEventListener('click', () => {
+          scroll.cancel();
+        }));
+    }
+    if (window.location.hash) {
+      blink(window.location.hash, 500);
+    }
   </script>
+  <script src="translate.js"></script>
 </body>
 </html>
