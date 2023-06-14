@@ -135,7 +135,6 @@
     });
     let start = 0;
     const randomAnimation = () => {
-      const timing = Math.floor(Math.random() * (8000 - 4500 +1) + 4500);
       start++;
       if (start === 4) start = 0;
       const e = document.querySelector('.profile');
@@ -146,7 +145,6 @@
       } else {
         e.classList.remove('reverse');
       }
-      // e.style.animationDuration = `${timing}ms`;
     }
     randomAnimation();
     setInterval(randomAnimation, 6000);
