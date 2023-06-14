@@ -673,14 +673,19 @@ main a:hover::before {
   align-items: center;
   justify-content: center;
   font-size: calc(30px + 1vw);
+  background: #640066;
 }
 
+body.youShouldScroll {
+  background: #640066;
+}
 body.youShouldScroll header, body.youShouldScroll main {
   position: relative;
   z-index: 1;
   -webkit-animation: ping 1.8s linear 4s infinite;
           animation: ping 1.8s linear 4s infinite;
   top: 0;
+  background: #640066;
 }
 
 @-webkit-keyframes ping {

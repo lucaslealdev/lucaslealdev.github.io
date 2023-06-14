@@ -381,14 +381,17 @@ main a:hover::before {
   align-items: center;
   justify-content: center;
   font-size: calc(30px + 100vw / 100);
+  background: darken($mainPurple, 30%);
 }
 
 body.youShouldScroll {
+  background: darken($mainPurple, 30%);
   header, main {
     position: relative;
     z-index: 1;
     animation: ping 1.8s linear  4s infinite;
     top: 0;
+    background: darken($mainPurple, 30%);
   }
 }
 

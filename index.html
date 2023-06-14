@@ -176,7 +176,7 @@
         if (window.scrollY === 0) return;
         document.body.classList.remove('youShouldScroll');
         const start = new Date().getTime();
-        scroll.to(start, window, document.querySelector('header').getBoundingClientRect().top + 70);
+        scroll.to(start, window, document.querySelector('header').getBoundingClientRect().top + 73);
         document.removeEventListener("scroll", scroll.action);
       },
       cancel: () => {
