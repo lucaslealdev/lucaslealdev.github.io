@@ -13,6 +13,7 @@
 <body>
   <article id="welcome">
     <p><strong>Hi!</strong> I'm Lucas, and you're not (probably) 😝</p>
+    <div id="pleaseScroll">There is more ⬇️</div>
   </article>
   <header>
     <c-container>
@@ -183,13 +184,14 @@
       },
     };
 
-    if (!window.location.hash && !isTouchDevice) {
+    if (!window.location.hash && !isTouchDevice && window.innerWidth >= 768) {
       document.body.classList.add('youShouldScroll');
       document.addEventListener("scroll", scroll.action);
       document.querySelectorAll('header a').forEach((link) => link
         .addEventListener('click', () => {
           scroll.cancel();
-        }));
+        })
+      );
     }
     if (window.location.hash) {
       blink(window.location.hash, 500);

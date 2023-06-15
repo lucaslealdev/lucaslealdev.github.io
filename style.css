@@ -239,6 +239,7 @@ a {
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
@@ -250,6 +251,7 @@ body {
   margin: 0;
   padding: 0;
   font-weight: 300;
+  height: 100%;
 }
 
 header {
@@ -469,6 +471,9 @@ img {
   position: sticky;
   top: 0px;
   border-right: 1px solid #263545;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 30px;
 }
 @media only screen and (max-width: 767px) {
   #profile {
@@ -668,16 +673,39 @@ main a:hover::before {
 }
 #welcome {
   text-align: center;
-  height: calc(100vh - 80px);
+  height: calc(100% - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: calc(30px + 1vw);
   background: #640066;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  #welcome {
+    display: none;
+  }
+}
+#welcome #pleaseScroll {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  opacity: 0;
+  -webkit-animation: fadeIn 700ms linear 4s;
+          animation: fadeIn 700ms linear 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  display: none;
 }
 
 body.youShouldScroll {
   background: #640066;
+}
+body.youShouldScroll #welcome #pleaseScroll {
+  display: block;
 }
 body.youShouldScroll header, body.youShouldScroll main {
   position: relative;
@@ -685,7 +713,7 @@ body.youShouldScroll header, body.youShouldScroll main {
   -webkit-animation: ping 1.8s linear 4s infinite;
           animation: ping 1.8s linear 4s infinite;
   top: 0;
-  background: #640066;
+  background: transparent;
 }
 
 @-webkit-keyframes ping {
@@ -761,6 +789,22 @@ body.youShouldScroll header, body.youShouldScroll main {
   }
   100% {
     top: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
