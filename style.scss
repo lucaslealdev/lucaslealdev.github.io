@@ -2,7 +2,7 @@ c-container {
   width: calc(100% - 30px);
   margin: 0 auto;
   display: block;
-  @media only screen and (min-width: 576px) {&{width: 537px;}}
+  @media only screen and (min-width: 576px) {&{width: 527px;}}
   @media only screen and (min-width: 768px) {&{width: 720px;}}
   @media only screen and (min-width: 992px) {&{width: 860px;}}
   @media only screen and (min-width: 1200px) {&{width: 1140px;}}
@@ -127,7 +127,7 @@ header {
   display: flex;
   c-column {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   h1 {
     padding: 0;
@@ -135,8 +135,13 @@ header {
     font-weight: bold;
     font-size: 20px;
     line-height: 64px;
+    margin-right: auto;
   }
   nav {
+    margin-right: 20px;
+    @media only screen and (max-width: 1220px) {
+      font-size: 13px;
+    }
     ul {
       li {
         display: inline-block;
@@ -319,10 +324,10 @@ article.bg {
 
 @media only screen and (max-width: 991px) {
   header c-column {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   header nav {
     display: none;
   }
@@ -439,3 +444,15 @@ body.youShouldScroll {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+div.lang {
+  user-select: none;
+  a {
+    line-height: 64px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+
+body.en .en {display: none;}
+body.pt-BR .pt-BR {display: none;}

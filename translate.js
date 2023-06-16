@@ -12,11 +12,19 @@
   const allowed = ['en', 'pt-BR'];
   if (!allowed.includes(lang)) lang = 'en';
 
-  const dictionary = await (await fetch(`./lang/${lang}.json`)).json();
+  document.body.classList.add(lang);
 
-  if (lang !== 'en' && dictionary) { //default
+  if (lang === 'en') return;
+
+  const dictionary = await (await fetch(`./lang/${lang}.json`)).json();
+  if (dictionary) {
     Object.keys(dictionary).forEach((key) => {
       replaceOnDocument(key, dictionary[key]);
     });
   }
 })();
+
+const setLang = (lang) => {
+  localStorage.setItem('lang', lang);
+  window.location.reload();
+}

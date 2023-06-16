@@ -5,7 +5,7 @@ c-container {
 }
 @media only screen and (min-width: 576px) {
   c-container {
-    width: 537px;
+    width: 527px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -261,7 +261,7 @@ header {
 }
 header c-column {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 header h1 {
   padding: 0;
@@ -269,6 +269,15 @@ header h1 {
   font-weight: bold;
   font-size: 20px;
   line-height: 64px;
+  margin-right: auto;
+}
+header nav {
+  margin-right: 20px;
+}
+@media only screen and (max-width: 1220px) {
+  header nav {
+    font-size: 13px;
+  }
 }
 header nav ul li {
   display: inline-block;
@@ -570,10 +579,10 @@ article.bg {
 }
 @media only screen and (max-width: 991px) {
   header c-column {
-    flex-direction: column;
+    flex-direction: row;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   header nav {
     display: none;
   }
@@ -806,5 +815,24 @@ body.youShouldScroll header, body.youShouldScroll main {
   to {
     opacity: 1;
   }
+}
+div.lang {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+div.lang a {
+  line-height: 64px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+body.en .en {
+  display: none;
+}
+
+body.pt-BR .pt-BR {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
