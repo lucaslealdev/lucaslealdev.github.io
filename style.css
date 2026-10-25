@@ -835,4 +835,24 @@ body.en .en {
 body.pt-BR .pt-BR {
   display: none;
 }
+#patchBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 1000;
+}
+@media only screen and (max-width: 767px) {
+  #patchBar {
+    position: relative;
+  }
+}
+#patchBar a {
+  color: #fff;
+  text-decoration: underline;
+}
 /*# sourceMappingURL=style.css.map */
